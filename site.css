@@ -1,0 +1,94 @@
+body, html {
+  padding: 0;
+  margin: 0;
+}
+
+button {
+  border: 0;
+  background-color: orangered;
+  color: white;
+  font-size: 1em;
+  padding: .5em 1em;
+  text-transform: uppercase;
+}
+
+button:active {
+  background-color: darkred;
+}
+
+input {
+  border: 0;
+  border-bottom: 2px solid orangered;
+  box-sizing: border-box;
+  font-size: 1em;
+  margin-bottom: 1em;
+  padding: .5em;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+#board-holder {
+  flex: 1 0 0px;
+}
+
+#form-holder {
+  display: flex;
+  flex: 0 0 150px;
+  flex-direction: column;
+  padding: 1em;
+  position: relative;
+}
+
+#slots {
+  display: flex;
+  flex-direction: row;
+  height: 525px;
+  position: absolute;
+  width: 525px;
+}
+
+#overlay {
+  background-image: url(./images/connect-four.png);
+  background-size: cover;
+  height: 450px;
+  position: absolute;
+  top: 75px;
+  width: 525px;
+}
+
+.column {
+  flex: 0 0 75px;
+  position: relative;
+}
+
+.spot {
+  box-sizing: border-box;
+  border: 1px solid #CCC;
+  border-radius: 65px;
+  height: 65px;
+  left: 5px;
+  position: relative;
+  top: 5px;
+  width: 65px;
+}
+
+.red .spot:hover {
+  background-color: red;
+}
+
+.black .spot:hover {
+  background-color: #black;
+}
+
+.full .spot {
+  border: 1px solid white;
+}
+
+.full .spot:hover {
+  background-color: white;
+  cursor: no-drop;
+}
